@@ -1,11 +1,12 @@
-include < stdio.h >
+#include <stdio.h>
+
 /**
- * main - Prints Hello world
+ * main - Entry point
  *
- * return: void
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	printf("hello world\n");
+	printf("Holberton School");
 	return (0);
 }
