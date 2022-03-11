@@ -1,8 +1,8 @@
-include < stdio.h >
+#include <stdio.h>
 /**
- *main - print sentence
+ * main - Print sentence
  *
- * return: always 0 when all is done correctly
+ * return: Always 0 when all is done correctly
  */
 int main(void)
 {
