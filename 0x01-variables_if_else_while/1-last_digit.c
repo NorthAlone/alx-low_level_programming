@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - tell if random number is positive or negative
+ * main - find the last digit of a random number and compare it 
  * Return: Always 0 (success)
  */
 int main(void)
