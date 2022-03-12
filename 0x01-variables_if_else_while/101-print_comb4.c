@@ -13,18 +13,15 @@ int main(void)
 		{
 			for (z = 0; z <= 9; z++)
 			{
-				if ((x != y) && (x != z) && (z != y))
+				if ((x != y) && (x != z) && (z != y) && y > x && z > y)
 				{
-					if (y > x && z > y)
+					putchar(x + '0');
+					putchar(y + '0');
+					putchar(z + '0');
+					if ((x * y * z) < 503)
 					{
-						putchar(x + '0');
-						putchar(y + '0');
-						putchar(z + '0');
-						if ((x * y * z) < 503)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+						putchar(',');
+						putchar(' ');
 					}
 			}	}
 		}
