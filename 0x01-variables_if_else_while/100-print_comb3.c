@@ -17,7 +17,7 @@ int main(void)
 				{
 					putchar(x + '0');
 					putchar(y + '0');
-					if (x&y != 89)
+					if ((x * pow(10, (int)log10(y) + 1) + y;) != 89)
 					{
 						putchar(',');
 						putchar(' ');
