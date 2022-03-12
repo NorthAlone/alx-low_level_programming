@@ -17,7 +17,7 @@ int main(void)
 				{
 					putchar(x + '0');
 					putchar(y + '0');
-					if ((x * y) != 89)
+					if ((x * y) < 81)
 					{
 						putchar(',');
 						putchar(' ');
