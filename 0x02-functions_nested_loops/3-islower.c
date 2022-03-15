@@ -12,7 +12,7 @@ int _islower(int c)
 {
 	int ret;
 
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 	{
 		ret = 1;
 	}
@@ -20,5 +20,5 @@ int _islower(int c)
 	{
 		ret = 0;
 	}
-	_putchar(ret + '0');
+	return (ret);
 }
