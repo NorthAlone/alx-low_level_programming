@@ -9,7 +9,7 @@
  * @c: character to check
  **/
 
-int _islower(int c);
+int _islower(int c)
 {
 	int ret;
 
