@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <ctype.h>
 #include "main.h"
 
 /**
@@ -13,7 +12,7 @@ int _islower(int c)
 {
 	int ret;
 
-	if (islower(c))
+	if (c >= 97 && c <= 122)
 	{
 		ret = 1;
 	}
