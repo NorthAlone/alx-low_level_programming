@@ -1,4 +1,4 @@
-#include <stdio.h>
+#iinclude <stdio.h>
 #include "main.h"
 
 /**
@@ -10,7 +10,7 @@
 
 int print_last_digit(int n)
 {
-	long int ret;
+	unsigned int ret;
 
 	if (n < 0)
 	{
