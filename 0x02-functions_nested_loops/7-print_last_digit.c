@@ -11,7 +11,9 @@
 int print_last_digit(int n)
 {
 	long n1, ret;
+
 	n1 = (long) n;
+
 	if (n1 < 0)
 	{
 		n1 *= (-1);
