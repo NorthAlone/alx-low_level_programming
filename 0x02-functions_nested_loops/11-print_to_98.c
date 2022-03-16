@@ -12,12 +12,13 @@ void print_to_98(int n)
 {
 	int i, counter;
 
-	counter = 98 - n;
+	counter = (98 - n);
 	if (counter != 0)
 	{
 		for (i = 0; i < (abs(counter) + 1); i++)
 		{
 			printf("%d", n);
+
 			if (i != (abs(counter)))
 			{
 				_putchar(',');
