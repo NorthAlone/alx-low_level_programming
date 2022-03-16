@@ -5,12 +5,12 @@
  * _abs - entry point
  * Description: computes the absolute value of an integer.
  * Return: Always 0
- * @int: number to check
+ * @n: number to check
  **/
 
-int _abs(int)
+int _abs(int n)
 {
-	int ret, n;
+	int ret;
 
 	if (n > 0)
 	{
