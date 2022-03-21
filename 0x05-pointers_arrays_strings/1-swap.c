@@ -8,7 +8,7 @@
 * @b: second value
 */
 
-void swap_int(int *a, int *b);
+void swap_int(int *a, int *b)
 {
 	int temp;
 	temp = a;
