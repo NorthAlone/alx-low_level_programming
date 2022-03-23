@@ -18,6 +18,16 @@ char *cap_string(char *str)
 				str[i] = str[i] - 32;
 			continue;
 		}
+		if (str[i] == '.')
+		{
+			i++;
+			if (str[i] != ' ' && str[i] != '\n')
+			{
+				 str[i] = str[i] - 32;
+				 continue;
+			}
+		}
+
 		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
 		{
 			if (str[i] == '\t')
@@ -31,6 +41,7 @@ char *cap_string(char *str)
 				str[i] = str[i] - 32;
 				continue;
 			}
+		
 		}
 		else
 		{
