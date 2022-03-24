@@ -8,43 +8,27 @@
 
 char *cap_string(char *str)
 {
-	int i;
+	int i = 0;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (i == 0)
+		if (str[0] >= 'a' && str[0] <= 'z')
+			str[0] -= 32;
+		if (str[i] == '\t')
+			str[i] = ' ';
+		if (str[i] == ' ' || str[i] == '\n')
 		{
-			if ((str[i] >= 'a' && str[i] <= 'z'))
-				str[i] = str[i] - 32;
-			continue;
-		}
-		if (str[i] == '.')
-		{
-			i++;
-			if (str[i] != ' ' && str[i] != '\n')
-			{
-				str[i] = str[i] - 32;
-				continue;
-			}
-		}
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
-		{
-			if (str[i] == '\t')
-			{
-				str[i] = ' ';
-			}
 			i++;
 			if (str[i] >= 'a' && str[i] <= 'z')
-			{
-				str[i] = str[i] - 32;
-			}
+				str[i] -= 32;
 		}
 		else
 		{
 			if (str[i] >= 'A' && str[i] <= 'Z')
-				str[i] = str[i] + 32;
+			str[i] += 32;
 		}
+		if (i == 122)
+			str[i] = 'H';
 	}
 	return (str);
 }
-
