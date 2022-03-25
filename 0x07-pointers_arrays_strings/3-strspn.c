@@ -13,21 +13,19 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
+		found = 0;
 		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (s[i] == accept[j])
 			{
+				result++;
 				found = 1;
 			}
 		}
-		if (found == 1)
+		if (found == 0)
 		{
-			found = 0;
-		}
-		else
-		{
-			result += 1;
+			return (result);
 		}
 	}
-	return (result);
+	return (0);
 }
