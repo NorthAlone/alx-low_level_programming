@@ -20,7 +20,7 @@ int is_prime_number(int n)
  * Return: 1 if prime number 0 if not
  */
 
-int search_prime_number(int n, i)
+int search_prime_number(int n, int i)
 {
 	if (i == 1)
 		return (1);
