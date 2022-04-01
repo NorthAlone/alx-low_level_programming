@@ -28,7 +28,9 @@ int main(int argc, char **argv)
 		number = atoi(argv[k]);
 
 		if (number >= 0)
+		{
 			result += number;
+		}
 	}
 	printf("%d\n", result);
 	return (0);
