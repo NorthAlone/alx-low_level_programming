@@ -11,13 +11,18 @@ int main(int argc, char **argv)
 {
 	int result = 0, number, i, j, k;
 
+	if (argc - 1 == 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 	for (i = 1; i < argc; i++)
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (argv[i][j] >= '9' || argv[i][j] < '0')
 			{
-				printf("Error");
+				printf("Error\n");
 				return (1);
 			}
 		}
