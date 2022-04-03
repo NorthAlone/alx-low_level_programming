@@ -20,30 +20,30 @@ void print_times_table(int n)
 					putchar(value + '0');
 				if (value <= 9 && j != 0)
 				{
-					putchar(',');
-					putchar(' ');
-					putchar(' ');
-					putchar(' ');
-					putchar(value + '0');
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(value + '0');
 				}
 				else if (value > 9 && value <= 99)
 				{
-					putchar(',');
-					putchar(' ');
-					putchar(' ');
-					putchar((value / 10) + '0');
-					putchar((value % 10) + '0');
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((value / 10) + '0');
+					_putchar((value % 10) + '0');
 				}
 				else if (value > 99)
 				{
-					putchar(',');
-					putchar(' ');
-					putchar((value / 100) + '0');
-					putchar((((value / 10)) % 10) + '0');
-					putchar((value % 10) + '0');
+					_putchar(',');
+					_putchar(' ');
+					_putchar((value / 100) + '0');
+					_putchar((((value / 10)) % 10) + '0');
+					_putchar((value % 10) + '0');
 				}
 			}
-			putchar('\n');
+			_putchar('\n');
 		}
 	}
 }
