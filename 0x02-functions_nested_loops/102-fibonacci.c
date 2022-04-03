@@ -11,7 +11,7 @@ int main(void)
 	int i;
 	unsigned long int first = 1, second = 2, next = 0;
 
-	for (i = 1; i <= n; i++)
+	for (i = 1; i <= 50; i++)
 	{
 		if (i == 1)
 			printf("%lu, ", first);
