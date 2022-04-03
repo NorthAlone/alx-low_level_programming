@@ -12,7 +12,7 @@ int main(void)
 	int i;
 	unsigned long int first = 1, second = 2, next = 0, sum = 2;
 
-	for (i = 1; i < 4000000; i++)
+	for (i = 1; i < 33; i++)
 	{
 		if (i > 2)
 		{
@@ -22,7 +22,7 @@ int main(void)
 			 next = 0;
 		}
 
-		if ((second % 2) == 0)
+		if (second < 4000000 && (second % 2) == 0)
 			sum += second;
 	}
 	printf("%lu", sum);
