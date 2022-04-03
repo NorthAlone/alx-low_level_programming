@@ -10,20 +10,16 @@
 int main(void)
 {
 	int i;
-	unsigned long int first = 1, second = 2, next = 0, sum = 2;
+	unsigned long int first = 1, second = 2, next = 0, sum = 0;
 
 	for (i = 1; i < 33; i++)
 	{
-		if (i > 2)
-		{
-			next = first + second;
-			first = second;
-			second = next;
-			 next = 0;
-		}
-
 		if (second < 4000000 && (second % 2) == 0)
-			sum += second;
+			sum += second;		
+		next = first + second;
+		first = second;
+		second = next;
+		next = 0;
 	}
 	printf("%lu", sum);
 	printf("\n");
