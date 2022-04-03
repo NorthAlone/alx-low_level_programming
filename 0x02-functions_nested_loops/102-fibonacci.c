@@ -14,9 +14,9 @@ int main(void)
 	for (i = 1; i <= n; i++)
 	{
 		if (i == 1)
-			printf("%d, ", first);
+			printf("%lu, ", first);
 		if (i == 1)
-			printf("%d, ", second);
+			printf("%lu, ", second);
 		if (i > 2)
 		{
 			next = first + second;
