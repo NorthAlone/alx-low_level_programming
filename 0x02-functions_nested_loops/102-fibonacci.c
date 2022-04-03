@@ -30,5 +30,6 @@ int main(void)
 			 next = 0;
 		}
 	}
+	printf("\n");
 	return (0);
 }
