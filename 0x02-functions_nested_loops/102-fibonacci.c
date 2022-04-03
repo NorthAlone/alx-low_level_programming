@@ -20,10 +20,11 @@ int main(void)
 		if (i > 2)
 		{
 			next = first + second;
-			printf("%lu, ", next);
+			if (i < 50)
+				printf("%lu, ", next);
+			else
+				printf("%lu", next);
 
-			first = second;
-			printf("%lu, ", next);
 			first = second;
 			second = next;
 			 next = 0;
