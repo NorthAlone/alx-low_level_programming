@@ -8,31 +8,31 @@
 
 void print_number(int n)
 {
-	if (value < 0)
+	if (n < 0)
 	{
-		value = value * (-1);
+		n = n * (-1);
 		_putchar('-');
 	}
-	else if (value <= 9)
+	else if (n <= 9)
 	{
-		_putchar(value + '0');
+		_putchar(n + '0');
 	}
-	else if (value > 9 && value <= 99)
+	else if (n > 9 && n <= 99)
 	{
-		_putchar((value / 10) + '0');
-		_putchar((value % 10) + '0');
+		_putchar((n / 10) + '0');
+		_putchar((n % 10) + '0');
 	}
-	else if (value > 99 && value <= 999)
+	else if (n > 99 && n <= 999)
 	{
-		_putchar((value / 100) + '0');
-		_putchar(((value / 10) % 10) + '0');
-		_putchar((value % 10) + '0');
+		_putchar((n / 100) + '0');
+		_putchar(((n / 10) % 10) + '0');
+		_putchar((n % 10) + '0');
 	}
-	else if (value > 999)
+	else if (n > 999)
 	{
-		_putchar((value / 1000) + '0');
-		_putchar(((value / 100) % 10) + '0');
-		_putchar(((value / 10) % 10) + '0');
-		_putchar((value % 10) + '0');
+		_putchar((n / 1000) + '0');
+		_putchar(((n / 100) % 10) + '0');
+		_putchar(((n / 10) % 10) + '0');
+		_putchar((n % 10) + '0');
 	}
 }
