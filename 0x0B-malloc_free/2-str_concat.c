@@ -29,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (s2)
 	{
-		while (i < (lenS1 + lenS2)
+		while (i < (lenS1 + lenS2))
 		{
 			*(ptr + i) = *(s2 + j);
 			i++;
