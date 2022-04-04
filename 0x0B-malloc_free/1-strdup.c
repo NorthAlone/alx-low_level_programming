@@ -21,9 +21,6 @@ char *_strdup(char *str)
 
 	i = 0;
 
-	if (str == NULL)
-		return (ptr = NULL);
-
 	if (ptr != NULL)
 	{
 		while (i < n)
@@ -35,7 +32,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		prt = NULL;
+		ptr = NULL;
 	}
 	return (ptr);
 }
