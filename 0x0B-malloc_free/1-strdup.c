@@ -32,7 +32,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		return (NULL);
+		prt = NULL;
 	}
 	return (ptr);
 }
