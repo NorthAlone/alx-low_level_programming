@@ -12,40 +12,29 @@ char *str_concat(char *s1, char *s2)
 	unsigned int lenS1 = 0, lenS2 = 0, i = 0, j = 0;
 	char *ptr;
 
-	if (s1 == NULL && s2 == NULL)
-	{
+	while (s1 && s1[lenS1])
+		lenS1++;
+	while (s2 && s2[lenS2])
+		lenS2++;
+
+	ptr = malloc(sizeof(char) * (lenS1 + lenS2 + 1)
+	if (ptr == NULL)
 		return (NULL);
-	}
-	else if (s1 == NULL && s2 != NULL)
-	{
-		while (s1[lenS1] != '\0')
-			lenS1++;
-	}
-	else if (s2 == NULL && s1 != NULL)
-	{
-		while (s2[lenS2] != '\0')
-			lenS2++;
-	}
-
-	ptr = malloc(sizeof(char) * (lenS1 + lenS2));
-
-	if (ptr != NULL)
+	if (s1)
 	{
 		while (i < lenS1)
+		*(ptr + i) = *(s1 + i);
+		i++;
+	}
+
+	if (s2)
+	{
+		while (j < lenS2)
 		{
-			*(ptr + i) = s1[i];
-			i++;
-		}
-		while (j <= lenS2)
-		{
-			*(ptr + i + j) = s2[j];
+			*(ptr + (i + j)) = *(s2 + j);
 			j++;
 		}
-		*(ptr + i + j) = '\0';
 	}
-	else if (ptr == NULL)
-	{
-		return (NULL);
-	}
+	*(ptr + (i + j)) = '\0';
 	return (ptr);
 }
