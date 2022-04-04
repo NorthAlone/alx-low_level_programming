@@ -21,6 +21,9 @@ char *_strdup(char *str)
 
 	i = 0;
 
+	if (str == NULL)
+		return (ptr = NULL);
+
 	if (ptr != NULL)
 	{
 		while (i < n)
