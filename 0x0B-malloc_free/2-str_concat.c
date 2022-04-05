@@ -23,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1)
 	{
 		while (i < lenS1)
-		*(ptr + i) = *(s1 + i);
+		ptr[i] = s1[i];
 		i++;
 	}
 
@@ -31,11 +31,11 @@ char *str_concat(char *s1, char *s2)
 	{
 		while (i < (lenS1 + lenS2))
 		{
-			*(ptr + i) = *(s2 + j);
+			ptr[i] = s2[j];
 			i++;
 			j++;
 		}
 	}
-	*(ptr + i) = '\0';
+	ptr[i] = '\0';
 	return (ptr);
 }
