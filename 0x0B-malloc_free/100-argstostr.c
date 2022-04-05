@@ -13,7 +13,7 @@ char *argstostr(int ac, char **av)
 	int i, j, k = 0, av_len = 0;
 	char *newStr;
 
-	if (ac == 0 or av == NULL)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
