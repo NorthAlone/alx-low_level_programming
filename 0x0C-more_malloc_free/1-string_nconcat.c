@@ -22,9 +22,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (ptr == NULL)
 		return (NULL);
 	if (n >= len2)
+	{
 		n = len2;
+		ptr = (char *)malloc(sizeof(char) * (len1 + n + 1));
+	}
 	else if (n < len2)
+	{
 		len2 = n;
+		ptr = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	}
+	if (ptr == NULL)
+		return (NULL);
 	if (s1)
 	{
 		while (i < len1)
