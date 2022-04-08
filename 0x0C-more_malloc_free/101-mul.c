@@ -49,20 +49,6 @@ void print_number(int value)
 }
 
 /**
- * mul - multiply two number
- * @number1: number 1
- * @number2: number 2
- * Return: print the product of two number
- */
-
-int mul(int *number1, int *number2)
-{
-	int value = (*number1) * (*number2);
-
-	return (value);
-}
-
-/**
  * main - multiplies two positive numbers
  * @argc: number of arguments
  * @argv: array of arguments value
@@ -72,7 +58,7 @@ int mul(int *number1, int *number2)
 int main(int argc, char *argv[])
 {
 	char *num1, *num2;
-	
+
 	num1 = argv[1];
 	num2 = argv[2];
 
