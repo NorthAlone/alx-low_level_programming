@@ -9,7 +9,8 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (!name || p == NULL)
+	if (!name || !p)
 		return;
 	f(name);
 }
+
