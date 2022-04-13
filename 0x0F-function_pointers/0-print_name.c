@@ -10,10 +10,7 @@
 
 void print_name(char *name, void (*f)(char *));
 {
-	void (*p)(char *);
-
-	p = f;
-	if (!name || !p)
+	if (!name || !f)
 		return;
-	p(name);
+	f(name);
 }
