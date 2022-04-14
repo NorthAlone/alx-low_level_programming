@@ -1,4 +1,5 @@
 #include "3-calc.h"
+
 /**
  * errorHandle - handle error
  * @value: exit value
@@ -27,7 +28,7 @@ int main(int argc, char *argv[])
 		errorHandle(98);
 	calc = get_op_func(argv[2]);
 
-	if (calc == NULL)
+	if (!calc)
 		errorHandle(99);
 
 	num1 = atoi(argv[1]);
