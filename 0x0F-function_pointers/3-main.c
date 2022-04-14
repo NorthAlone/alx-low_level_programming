@@ -1,16 +1,6 @@
 #include "3-calc.h"
 
 /**
- * errorHandle - handle error
- * @value: exit value
- */
-void errorHandle(int value)
-{
-	printf("Error\n");
-	exit(value);
-}
-
-/**
  * main - entry point
  * @argc: argument count
  * @argv: array of argument value
@@ -25,17 +15,26 @@ int main(int argc, char *argv[])
 
 	operator = *argv[2];
 	if (argc != 4)
-		errorHandle(98);
+	{
+		printf("Error\n");
+		exit(98);
+	}
 	calc = get_op_func(argv[2]);
 
 	if (!calc)
-		errorHandle(99);
+	{
+		printf("Error\n");
+		exit(99);
+	}
 
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
 	if ((operator == '%' || operator == '/') && num2 == 0)
-		errorHandle(100);
+	{
+		printf("Error\n");
+		exit(100);
+	}
 
 	result = calc(num1, num2);
 	printf("%d\n", result);
