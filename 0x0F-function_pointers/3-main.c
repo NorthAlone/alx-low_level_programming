@@ -16,16 +16,16 @@ void errorHandle(int value)
  * Return: 0 for success
  */
 
-int main(int argc, *argv[])
+int main(int argc, char *argv[])
 {
 	int num1, num2, result;
 	char operator;
 	int (*calc)(int, int);
 
-	operator = argv[2];
+	operator = *argv[2];
 	if (argc != 4)
 		errorHandle(98);
-	calc = get_op_func(operator);
+	calc = get_op_func(argv[2]);
 
 	if (calc == NULL)
 		errorHandle(99);
