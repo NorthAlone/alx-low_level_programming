@@ -8,17 +8,14 @@
  * Return: adress of new node or NULL
  */
 
-list_t *add_nodeint_end(list_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	list_t *newNode;
-	list_t *save = *head;
+	listint_t *newNode;
+	listint_t *save = *head;
 
-	newNode = malloc(sizeof(list_t));
+	newNode = malloc(sizeof(listint_t));
 	if (newNode == NULL)
 		return (NULL);
-
-	while (str[strLen])
-		strLen++;
 
 	newNode->n = n;
 	newNode->next = NULL;
