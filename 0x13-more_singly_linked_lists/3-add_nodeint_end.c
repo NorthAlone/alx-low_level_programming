@@ -1,14 +1,14 @@
 #include "lists.h"
 
 /**
- * add_node_end - t adds a new node
+ * add_nodeint_end - t adds a new node
  * at the end of a list_t list.
  * @head: pointer to head pointer
  * @n: number to add;
  * Return: adress of new node or NULL
  */
 
-list_t *add_node_end(list_t **head, const int n)
+list_t *add_nodeint_end(list_t **head, const int n)
 {
 	list_t *newNode;
 	list_t *save = *head;
