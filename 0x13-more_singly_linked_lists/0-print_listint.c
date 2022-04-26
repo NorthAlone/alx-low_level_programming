@@ -3,7 +3,7 @@
 /**
  * print_listint - prints all the elements of a
  * listint_t list.
- * @h: head
+ * @h: pointer to head
  * Return: print element and return number
  */
 
