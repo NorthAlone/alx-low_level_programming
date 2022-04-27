@@ -10,28 +10,13 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *foundNode;
-	listint_t *temp;
-	size_t size = 0;
-	temp = head;
+	unsigned int i = 0
+	listint_t *save = head;
 
-	while (head != NULL)
+	while (save && i < index)
 	{
-		size++;
-		head = head->next;
+		save = save->next;
+		i++;
 	}
-
-	index++;
-	head = temp;
-
-	if (size == 0 || index > size)
-		return (NULL);
-
-	while (index <= size)
-	{
-		foundNode = head;
-		head = head->next;
-		index++;
-	}
-	return (foundNode);
+	return (save ? save : NULL);
 }
