@@ -4,19 +4,19 @@
  * close_fd - close fd
  * @fdSrc: Source file fd
  * @fdDest: Destination fd
- * @j: close fdSrc status
- * @k: close fdDest status
+ * @a: close fdSrc status
+ * @b: close fdDest status
  * Return: 0 success
  */
-int close_fd(int j, int k, int fdSrc, int fdDest)
+int close_fd(int fdSrc, int fdDest)
 {
-	j = close(fdSrc);
-	k = close(fdDest);
-	if (j < 0 || k < 0)
+	int a = close(fdSrc);
+	int b = close(fdDest);
+	if (a < 0 || b < 0)
 	{
-		if (j < 0)
+		if (a < 0)
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdSrc);
-		if (k < 0)
+		if (b < 0)
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdDest);
 		exit(100);
 	}
@@ -31,7 +31,7 @@ int close_fd(int j, int k, int fdSrc, int fdDest)
  */
 int main(int argc, char *argv[])
 {
-	int fdSrc, fdDest, i, j, k;
+	int fdSrc, fdDest, i;
 	char buf[BUFSIZ];
 
 	if (argc != 3)
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	close_fd(j, k, fdSrc, fdDest);
+	close_fd(fdSrc, fdDest);
 	return (0);
 
 }
