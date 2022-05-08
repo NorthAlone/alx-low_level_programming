@@ -1,11 +1,33 @@
 #include "main.h"
 
 /**
+ * close_fd - close fd
+ * @fdSrc: Source file fd
+ * @fdDest: Destination fd
+ * @j: close fdSrc status
+ * @k: close fdDest status
+ * Return: 0 success
+ */
+int close_fd(int j, int k, int fdSrc, int fdDest)
+{
+	j = close(fdSrc);
+	k = close(fdDest);
+	if (j < 0 || k < 0)
+	{
+		if (j < 0)
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdSrc);
+		if (k < 0)
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdDest);
+		exit(100);
+	}
+	return (0);
+}
+/**
  * main - entry point
  * copies the content of a file to another file.
  * @argc: number of arguments
  * @argv: value of argument
- * Return 0 success
+ * Return: 0 success
  */
 int main(int argc, char *argv[])
 {
@@ -38,16 +60,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	j = close(fdSrc);
-	k = close(fdDest);
-	if (j < 0 || k < 0)
-	{
-		if (j < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdSrc);
-		if (k < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdDest);
-		exit(100);
-	}
+	close_fd(j, k, fdSrc, fdDest);
 	return (0);
 
 }
