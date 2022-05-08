@@ -4,14 +4,13 @@
  * close_fd - close fd
  * @fdSrc: Source file fd
  * @fdDest: Destination fd
- * @a: close fdSrc status
- * @b: close fdDest status
  * Return: 0 success
  */
 int close_fd(int fdSrc, int fdDest)
 {
 	int a = close(fdSrc);
 	int b = close(fdDest);
+
 	if (a < 0 || b < 0)
 	{
 		if (a < 0)
