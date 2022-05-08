@@ -9,8 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int fdSrc, fdDest, i, j;
-	char buf[bufSize];
+	int fdSrc, fdDest, i, j, k;
+	char buf[BUFSIZ];
 
 	if (argc != 3)
 	{
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	fdDest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((i = read(fdSrc, buf, bufSize)) > 0)
+	while ((i = read(fdSrc, buf, BUFSIZ)) > 0)
 	{
 		if (fdDest < 0 || write(fdDest, buf, i) != i)
 		{
